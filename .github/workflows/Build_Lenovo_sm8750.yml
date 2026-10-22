@@ -14,6 +14,7 @@ on:
           - '6.6.89'
           - '6.6.102'
           - '6.6.118'
+          - '6.6.139'
         default: '6.6.89'
         
       custom_kernel_suffix:
@@ -115,6 +116,10 @@ jobs:
               echo "os_patch_level=2026-01" >> $GITHUB_ENV
               echo "releases=TB322_ZUXOS_1.5.10.183" >> $GITHUB_ENV
               ;;
+            "6.6.139")
+              echo "os_patch_level=2026-08" >> $GITHUB_ENV
+              echo "releases=TB322_ZUXOS_2.5.02.086" >> $GITHUB_ENV
+              ;;
           esac
            if [ -z "${{ env.CUSTOM_KERNEL_SUFFIX }}" ]; then
             case "${{ env.KERNEL_VERSION }}" in
@@ -129,6 +134,9 @@ jobs:
                 ;;
               "6.6.118")
                 DEFAULT_SUFFIX='-android15-8-g350f378eb496-ab14943902-4k'
+                ;;
+              "6.6.139")
+                DEFAULT_SUFFIX='-android15-8-g5d4cdf2ffe45-ab16023396-4k'
                 ;;
             esac
             echo "DEFAULT_SUFFIX=$DEFAULT_SUFFIX" >> $GITHUB_ENV
@@ -150,6 +158,9 @@ jobs:
                 ;;
               6.6.118)
                 KERNEL_TIME='Thu Feb 26 02:40:50 UTC 2026'
+                ;;
+              6.6.139)
+                KERNEL_TIME='Thu Jul 9 11:27:42 UTC 2026'
                 ;;
             esac
             echo "KERNEL_TIME=$KERNEL_TIME" >> $GITHUB_ENV
