@@ -117,7 +117,7 @@ jobs:
               echo "releases=TB322_ZUXOS_1.5.10.183" >> $GITHUB_ENV
               ;;
             "6.6.139")
-              echo "os_patch_level=2026-08" >> $GITHUB_ENV
+              echo "os_patch_level=2026-01" >> $GITHUB_ENV
               echo "releases=TB322_ZUXOS_2.5.02.086" >> $GITHUB_ENV
               ;;
           esac
