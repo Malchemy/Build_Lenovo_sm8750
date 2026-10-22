@@ -160,7 +160,7 @@ jobs:
                 KERNEL_TIME='Thu Feb 26 02:40:50 UTC 2026'
                 ;;
               6.6.139)
-                KERNEL_TIME='Thu Jul 9 11:27:42 UTC 2026'
+                KERNEL_TIME='Wed Aug 5 22:41:46 UTC 2026'
                 ;;
             esac
             echo "KERNEL_TIME=$KERNEL_TIME" >> $GITHUB_ENV
